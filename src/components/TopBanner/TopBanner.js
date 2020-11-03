@@ -23,7 +23,7 @@ const TopBanner = () => {
             reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
             pariatur.
           </p>
-          <Link to="/">
+          <Link to="/pricing">
             <button className="btn btn-warning" onClick={handleGA}>
               JOIN US
             </button>

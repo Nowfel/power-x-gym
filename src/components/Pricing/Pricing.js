@@ -1,11 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import MembershipForm from "../MembershipForm/MembershipForm";
 import PlanCard from "../PlanCard/PlanCard";
 import plans from "../../fakeData/plans";
 
 const Pricing = () => {
   const data = plans;
   const [price, setPrice] = useState(0);
+  const [showPaypal, setShowPaypal] = useState(false);
+  const [memberDetails, setMemberDetails] = useState({});
   const [planList, setPlanList] = useState(data);
+
+  const formComplete = (details) => {
+    setMemberDetails(details);
+    setShowPaypal(true);
+  };
 
   return (
     <div>
@@ -22,6 +30,7 @@ const Pricing = () => {
             />
           ))}
       </div>
+      {!showPaypal && !!price && <MembershipForm formComplete={formComplete} />}
     </div>
   );
 };

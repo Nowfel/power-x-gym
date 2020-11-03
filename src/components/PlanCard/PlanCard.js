@@ -21,7 +21,9 @@ const PlanCard = ({ handlePlan, price, bgImg, heading, features }) => {
             <li key={id}>{feature}</li>
           ))}
         </ul>
-        <button className="btn btn-warning">Purchase</button>
+        <button onClick={() => handlePlan(price)} className="btn btn-warning">
+          Purchase
+        </button>
       </div>
     </div>
   );

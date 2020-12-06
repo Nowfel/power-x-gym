@@ -28,7 +28,7 @@ const ClassDetails = ({ details, hideDetails }) => {
         <button className="btn btn-warning m-2" onClick={hideDetails}>
           Classes
         </button>
-        <Link to="/">
+        <Link to="/pricing">
           <button className="btn btn-warning m-2">Join Us</button>
         </Link>
       </div>
